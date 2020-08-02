@@ -5,16 +5,16 @@ import math
 #Q4a
 Hpi = np.arange(3,3.201,0.005)
 Hsigma = np.arange(1,7.1,0.4)
-diameter = [10,20,30,40,50,60]
-circumference = [34,61,95,124,148,190]
-estimate = [i/j for i,j in zip(circumference,diameter)]
+d = [10,20,30,40,50,60] 
+c = [0,0,0,0,0,0] # measured values
+e = [i/j for i,j in zip(c,d)]
 La = np.zeros((41,16))
 
 for i in range(len(Hpi)):
     for j in range(len(Hsigma)):
         pi = round(Hpi[i],2)
         sigma = round(Hsigma[j],2)
-        Px = [(1/sigma*math.sqrt(2*math.pi))*math.exp(-(((circumference[x]-pi*diameter[x])**2)/(2*sigma**2))) for x in range(len(circumference))]
+        Px = [(1/sigma*math.sqrt(2*math.pi))*math.exp(-(((c[x]-pi*d[x])**2)/(2*sigma**2))) for x in range(len(c))]
         La[i,j] = np.prod(Px)
 
 jPDFa = La/La.sum() # uniform priors
@@ -34,7 +34,7 @@ for i in range(len(Hpi)):
     for j in range(len(Hsigma)):
         pi = round(Hpi[i],2)
         sigma = round(Hsigma[j],2)
-        Px = [(0.1*(1/15*math.sqrt(2*math.pi))*math.exp(-(((circumference[x]-pi*diameter[x])**2)/(2*15**2))) + 0.9*(1/sigma*math.sqrt(2*math.pi))*math.exp(-(((circumference[x]-pi*diameter[x])**2)/(2*sigma**2)))) for x in range(len(circumference))]
+        Px = [(0.1*(1/15*math.sqrt(2*math.pi))*math.exp(-(((c[x]-pi*d[x])**2)/(2*15**2))) + 0.9*(1/sigma*math.sqrt(2*math.pi))*math.exp(-(((c[x]-pi*d[x])**2)/(2*sigma**2)))) for x in range(len(c))]
         Lb[i,j] = np.prod(Px)
 
 jPDFb = Lb/Lb.sum() # uniform priors
