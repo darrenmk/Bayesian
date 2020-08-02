@@ -5,7 +5,7 @@ mu1 = 0
 Hmu2 = [1,2,3,4]
 Hsigma = [1,2,3]
 
-data = [3,3,3,1,1,2,2,3]
+data = [0,0,0,0,0,0,0,0] # data goes here
 
 like1 = np.zeros((3))
 like2 = np.zeros((4,3))
