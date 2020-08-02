@@ -1,8 +1,8 @@
 import numpy as np
 import math
 
-playerA = [42,38,44,43,44]
-playerB = [45,43,42,43,46]
+scoreA = [42,38,44,43,44] #
+scoreB = [45,43,42,43,46] #
 
 Hmu = np.arange(30,51,1)
 Hsigma = np.arange(1,10.45,0.45)
@@ -14,8 +14,8 @@ for i in range(len(Hmu)):
     for j in range(len(Hsigma)):
         mu = round(Hmu[i],2)
         sigma = round(Hsigma[j],2)
-        likeA[i,j] = np.prod([(1/(sigma*math.sqrt(2*math.pi)))*math.exp(-((x-mu)**2/(2*sigma**2))) for x in playerA])
-        likeB[i,j] = np.prod([(1/(sigma*math.sqrt(2*math.pi)))*math.exp(-((x-mu)**2/(2*sigma**2))) for x in playerB])
+        likeA[i,j] = np.prod([(1/(sigma*math.sqrt(2*math.pi)))*math.exp(-((x-mu)**2/(2*sigma**2))) for x in scoreA])
+        likeB[i,j] = np.prod([(1/(sigma*math.sqrt(2*math.pi)))*math.exp(-((x-mu)**2/(2*sigma**2))) for x in scoreB])
 
 jPDFa = likeA/likeA.sum()
 muPDFa = np.sum(jPDFa,axis=1)
