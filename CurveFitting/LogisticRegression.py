@@ -6,8 +6,8 @@ import math
 Ha = np.arange(4,14.5,0.5)
 Hb = np.arange(0.1,1.15,0.05)
 dose = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1.0, 1.5, 2.0]
-h = [0,0,1,2,4,6,8,9,9,10,10]
-n = 10
+h = [0,0,1,2,4,6,8,9,9,10,10] # number of successes
+n = 10 # number of trials
 L = np.zeros((21,21))
 
 for i in range(len(Ha)):
