@@ -31,8 +31,8 @@ range_a = [Hp[min(idx)], Hp[max(idx)]] # this is the 95% confidence interval
 
 
 # Example 2
-h = 11
-n = 12
+h = 0 # number of successes
+n = 0 # number of trials
 Lb = [0]*100
 i = 0
 
