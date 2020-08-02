@@ -13,7 +13,6 @@ postM2 = likeM2/(likeM1+likeM2)
 
 BF = postM1/postM2
 
-#Q3b
 BFb = 1
 h = 1
 
