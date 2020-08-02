@@ -6,15 +6,15 @@ import math
 Hpi = np.arange(3,3.301,0.0075)
 Hsigma = np.arange(1,6)
 data = [29/10,62/20,96/30,123/40,159/50]
-diameter = [10,20,30,40,50]
+d = [10,20,30,40,50]
 L = np.zeros((41,5))
 
 for i in range(len(Hpi)):
     for j in range(len(Hsigma)):
         pi = round(Hpi[i],2)
         sigma = round(Hsigma[j],2)
-        circum = [a*b for a,b in zip(data,diameter)]
-        P = [(1/sigma*math.sqrt(2*math.pi))*math.exp(-(((circum[w]-pi*diameter[w])**2)/(2*sigma**2))) for w in range(len(circum))]
+        circum = [a*b for a,b in zip(data,d)]
+        P = [(1/sigma*math.sqrt(2*math.pi))*math.exp(-(((circum[w]-pi*d[w])**2)/(2*sigma**2))) for w in range(len(circum))]
         L[i,j] = np.prod(P)
 
 jointPostPDF = L/L.sum() # uniform priors
