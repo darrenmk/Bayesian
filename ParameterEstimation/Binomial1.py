@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 
 # Example 1
 Hp = [round(x/100-0.005,3) for x in range(1,101)]
-h = 6
-n = 8
+h = 0 # number of successes
+n = 0 # number of trials
 La = [0]*100
 i = 0
 
