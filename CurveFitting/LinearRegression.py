@@ -5,7 +5,7 @@ import math
 #Q3
 Hpi = np.arange(3,3.301,0.0075)
 Hsigma = np.arange(1,6)
-data = [29/10,62/20,96/30,123/40,159/50]
+data = [0/10,0/20,0/30,0/40,0/50] # fill in data here
 d = [10,20,30,40,50]
 L = np.zeros((41,5))
 
