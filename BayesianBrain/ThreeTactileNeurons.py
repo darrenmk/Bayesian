@@ -3,7 +3,6 @@ import math
 
 sigma = 1 # this is the receptive field, larger means the neuron is receptive to stimuli that are farther away
 
-#Q4b
 def rate1(xh):
     return 20*math.exp(-((6-xh)**2+(2-2)**2)/(2*(sigma**2)))
 
