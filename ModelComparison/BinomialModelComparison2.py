@@ -3,7 +3,7 @@ import numpy as np
 M1 = 1/5
 M2 = np.arange(0.30,0.51,0.05)
 
-correct = [22,100-22]
+correct = [n,100-n] # change n to number of correct trials
 
 likeM1 = (M1**correct[0])*((1-M1)**correct[1])
 likeM2 = np.mean([(p**correct[0])*((1-p)**correct[1]) for p in M2])
