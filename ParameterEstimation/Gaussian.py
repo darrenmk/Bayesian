@@ -5,8 +5,8 @@ import math
 H_mu = np.arange(160,265,5)
 H_sigma = np.arange(10,45,5)
 L = np.zeros((21,7))
-weights = [215, 190, 220, 225, 200, 240, 220, 196, 168, 200]
-yiker = [0]*len(weights)
+weights = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Li = [0]*len(weights)
 
 i = 0
 for mu in H_mu:
@@ -14,9 +14,9 @@ for mu in H_mu:
     for sigma in H_sigma:
         z = 0
         for x in weights:
-            yiker[z] = (1/sigma*math.sqrt(2*math.pi))*math.exp(-((x-mu)**2/(2*sigma**2)))
+            Li[z] = (1/sigma*math.sqrt(2*math.pi))*math.exp(-((x-mu)**2/(2*sigma**2)))
             z += 1
-        L[i,j] = np.prod(yiker)
+        L[i,j] = np.prod(Li)
         j += 1
     i += 1
 
