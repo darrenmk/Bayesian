@@ -1,8 +1,8 @@
 import numpy as np
 import math
 
-scoreA = [42,38,44,43,44] #
-scoreB = [45,43,42,43,46] #
+scoreA = [0,0,0,0,0] # fill in with scores
+scoreB = [0,0,0,0,0] # fill in with scores
 
 Hmu = np.arange(30,51,1)
 Hsigma = np.arange(1,10.45,0.45)
