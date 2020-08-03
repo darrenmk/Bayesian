@@ -1,17 +1,19 @@
 import numpy as np
 import math
 
-n1 = [3,18,4]
-n2 = [5,3,5]
-n3 = [7,20,8]
+n1 = [3,18,4] # number of spikes on trial 1
+n2 = [5,3,5] # number of spikes on trial 2
+n3 = [7,20,8] # number of spikes on trial 3
 
 def rate1(xh):
     return 20*math.exp(-((6-xh)**2+(2-2)**2)/2)
+    # calculate the expected firing rate under model 1
 
 rateM1 = [rate1(4), rate1(6), rate1(8)]
 
 def rate2(x1,x2,xh):
     return 10*math.exp(-((x1-xh)**2+(2-2)**2)/2) + 10*math.exp(-((x2-xh)**2+(2-2)**2)/2)
+    # calculate the expected firing rate under model 2
 
 rateM2a = [rate2(5,7,4), rate2(5,7,6), rate2(5,7,8)]
 rateM2b = [rate2(4,8,4), rate2(4,8,6), rate2(4,8,8)]
