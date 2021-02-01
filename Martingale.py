@@ -1,6 +1,16 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Jan 25 15:08:53 2021
+
+Simulates gambling with the "Martingale" strategy, where one doubles their bet after each loss to recover all previous losses and their original bet.
+Free money right? Simulate to see.
+
+Parameters:
+n_sims = number of times you want to simulate the play function
+start_chips = number of chips you have
+start_bet = your initial bet (will be doubled after each loss)
+odds = [p q] where p is the number of ways to lose and q is the number of ways to win
+house edge = percentage that the house takes off of the probability of winning for each bet
 """
 
 import numpy as np
