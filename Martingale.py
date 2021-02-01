@@ -9,7 +9,7 @@ Parameters:
 n_sims = number of times you want to simulate the play function
 start_chips = number of chips you have
 start_bet = your initial bet (will be doubled after each loss)
-odds = [p q] where p is the number of ways to lose and q is the number of ways to win
+odds = [p q] where p is the number of ways to lose and q is the number of ways to win. 5:1 odds are represented with odds = [5,1].
 house edge = percentage that the house takes off of the probability of winning for each bet
 """
 
